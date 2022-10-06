@@ -14,5 +14,6 @@ class Book:
         self.content.append(tableName)
 
     def print(self):
+        print(self.name)
         for element in self.content:
             print(element)
