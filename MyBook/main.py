@@ -1,17 +1,27 @@
+from Author import Author
 from Book import Book
 
 def main():
     discountTitanic = Book("Disco Titanic")
+    andreiDomsa = Author("Andrei Domsa")
 
-    discountTitanic.createNewParagraph("Paragraph 1")
-    discountTitanic.createNewParagraph("Paragraph 2")
-    discountTitanic.createNewParagraph("Paragraph 3")
-    discountTitanic.createNewImage("Image 1")
-    discountTitanic.createNewParagraph("Paragraph 4")
-    discountTitanic.createNewTable("Table 1")
-    discountTitanic.createNewParagraph("Paragraph 5")
+    discountTitanic.addAuthor(andreiDomsa)
 
-    discountTitanic.print()
+    indexChapterOne = discountTitanic.createChapter("Capitolul 1")
+    chp1 = discountTitanic.getChapter(indexChapterOne)
+
+    indexSubChapterOneOne = chp1.createSubChapter("Subcapitolul 1.1")
+    scOneOne = chp1.getSubChapter(indexSubChapterOneOne)
+
+    scOneOne.createNewParagraph("Paragraph 1")
+    scOneOne.createNewParagraph("Paragraph 2")
+    scOneOne.createNewParagraph("Paragraph 3")
+    scOneOne.createNewImage("Image 1")
+    scOneOne.createNewParagraph("Paragraph 4")
+    scOneOne.createNewTable("Table 1")
+    scOneOne.createNewParagraph("Paragraph 5")
+
+    scOneOne.print()
 
 if __name__ == "__main__":
     main()

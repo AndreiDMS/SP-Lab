@@ -1,19 +1,26 @@
-
+from Chapter import Chapter
 class Book:
+    """ Book
+    """
     def __init__(self, name):
         self.name = name
-        self.content = []
+        self.author = None
+        self.chapters = []
 
-    def createNewParagraph(self, paragraphName):
-        self.content.append(paragraphName)
+    def addAuthor(self, author):
+        self.author = author
 
-    def createNewImage(self, imageName):
-        self.content.append(imageName)
+    def createChapter(self, chapterName):
+        chapter = Chapter(chapterName)
+        self.chapters.append(chapter)
+        return len(self.chapters) - 1
 
-    def createNewTable(self, tableName):
-        self.content.append(tableName)
+    def getChapter(self, chapterIndex):
+        return self.chapters[chapterIndex]
 
     def print(self):
         print(self.name)
-        for element in self.content:
-            print(element)
+        if self.author:
+            self.author.print()
+        for chapter in self.chapters:
+            chapter.print()
