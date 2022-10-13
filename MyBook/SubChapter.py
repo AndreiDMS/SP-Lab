@@ -1,4 +1,9 @@
 
+from Image import Image
+from Table import Table
+from Paragraph import Paragraph
+
+
 class SubChapter:
     """SubChapter
     """
@@ -8,15 +13,18 @@ class SubChapter:
         self.content = []
 
     def createNewParagraph(self, paragraphName):
-        self.content.append(paragraphName)
+        paragraph = Paragraph(paragraphName)
+        self.content.append(paragraph)
 
     def createNewImage(self, imageName):
-        self.content.append(imageName)
+        image = Image(imageName)
+        self.content.append(image)
 
     def createNewTable(self, tableName):
-        self.content.append(tableName)
+        table = Table(tableName)
+        self.content.append(table)
 
     def print(self):
-        print(self.name)
+        print("Subchapter:", self.name)
         for element in self.content:
-            print(element)
+            element.print()

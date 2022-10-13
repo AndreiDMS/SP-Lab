@@ -17,6 +17,6 @@ class Chapter:
         return self.subChapters[subChapterIndex]
 
     def print(self):
-        print(self.name)
+        print("Chapter:", self.name)
         for subChapter in self.subChapters:
             subChapter.print()

@@ -19,7 +19,7 @@ class Book:
         return self.chapters[chapterIndex]
 
     def print(self):
-        print(self.name)
+        print("Book:", self.name)
         if self.author:
             self.author.print()
         for chapter in self.chapters:

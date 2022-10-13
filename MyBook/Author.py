@@ -7,4 +7,4 @@ class Author:
         self.name = name
         
     def print(self) -> None:
-        print(self.name)
+        print("Author:", self.name)
