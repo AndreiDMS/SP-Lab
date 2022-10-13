@@ -1,5 +1,8 @@
 
-class Image:
+from ElementInterface import ElementInterface
+
+
+class Image(ElementInterface):
     """Image
     """
 

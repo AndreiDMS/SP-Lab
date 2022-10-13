@@ -1,5 +1,8 @@
 
-class Table:
+from ElementInterface import ElementInterface
+
+
+class Table(ElementInterface):
     """Table
     """
 

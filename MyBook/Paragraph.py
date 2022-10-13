@@ -1,5 +1,8 @@
 
-class Paragraph:
+from ElementInterface import ElementInterface
+
+
+class Paragraph(ElementInterface):
     """Paragraph
     """
 

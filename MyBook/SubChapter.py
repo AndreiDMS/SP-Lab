@@ -4,7 +4,7 @@ from Table import Table
 from Paragraph import Paragraph
 
 
-class SubChapter:
+class SubChapter():
     """SubChapter
     """
 
