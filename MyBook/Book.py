@@ -1,26 +1,27 @@
-from Chapter import Chapter
-class Book:
+from CompoundElement import CompoundElement
+
+
+class Book(CompoundElement):
     """ Book
     """
+
     def __init__(self, name):
+        super(Book, self).__init__()
         self.name = name
         self.author = None
-        self.chapters = []
+
+    def addContent(self, content):
+        self.add(content)
 
     def addAuthor(self, author):
         self.author = author
 
-    def createChapter(self, chapterName):
-        chapter = Chapter(chapterName)
-        self.chapters.append(chapter)
-        return len(self.chapters) - 1
-
-    def getChapter(self, chapterIndex):
-        return self.chapters[chapterIndex]
-
     def print(self):
         print("Book:", self.name)
+
+        print("\nAuthors:")
         if self.author:
             self.author.print()
-        for chapter in self.chapters:
-            chapter.print()
+
+        print("\n")
+        super(Book, self).print()
