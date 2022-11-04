@@ -1,9 +1,10 @@
 
 from ElementInterface import ElementInterface
+from PictureInterface import PictureInterface
 from Image import Image
 
 
-class ImageProxy(ElementInterface):
+class ImageProxy(ElementInterface, PictureInterface):
     """Image
     """
 
@@ -11,13 +12,21 @@ class ImageProxy(ElementInterface):
         super().__init__()
         self.name = name
         self.imagePath = imagePath
-        self.dim = None
         self.realImage = None
 
     def loadImage(self):
         if not self.realImage:
-            self.realImage = Image(self.name)
+            self.realImage = Image(self.name, self.imagePath)
         return self.realImage
 
     def print(self):
         self.loadImage().print()
+
+    def content(self):
+        return self.loadImage().content()
+
+    def dim(self):
+        return self.loadImage().dim()
+
+    def url(self):
+        return self.loadImage().url()
