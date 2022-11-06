@@ -8,5 +8,5 @@ class AlignStrategyInterface(ABC):
         self.lineWidth = 100
 
     @abstractmethod
-    def render(self, paragrah):
+    def render(self, paragraph):
         pass
