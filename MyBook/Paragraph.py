@@ -9,6 +9,13 @@ class Paragraph(ElementInterface):
     def __init__(self, name) -> None:
         super().__init__()
         self.name = name
+        self.textAlignment = None
 
     def print(self):
-        print("Paragraph:", self.name)
+        if self.textAlignment:
+            self.textAlignment.render(self.name)
+        else:
+            print("Paragraph:", self.name)
+
+    def setAlignStrategy(self, alignmentStrategy):
+        self.textAlignment = alignmentStrategy
