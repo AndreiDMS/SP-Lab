@@ -1,5 +1,6 @@
 
-from Interfaces import ElementInterface
+from Interfaces.ElementInterface import ElementInterface
+from Interfaces.Visitor import Visitor
 
 
 class Table(ElementInterface):
@@ -12,3 +13,6 @@ class Table(ElementInterface):
 
     def print(self):
         print("Table with title:", self.name)
+
+    def accept(self, visitor: Visitor):
+        visitor.visitTable(self)

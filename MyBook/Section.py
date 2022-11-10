@@ -1,4 +1,5 @@
 from CompoundElement import CompoundElement
+from Interfaces.Visitor import Visitor
 
 
 class Section(CompoundElement):
@@ -10,3 +11,7 @@ class Section(CompoundElement):
     def print(self):
         print(self.name)
         super(Section, self).print()
+
+    def accept(self, visitor: Visitor):
+        visitor.visitSection(self)
+        super(Section, self).accept(visitor)

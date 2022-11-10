@@ -1,8 +1,9 @@
 from Paragraph import Paragraph
 from Section import Section
-from Strategies.AlignCenter import AlignCenter
-from Strategies.AlignLeft import AlignLeft
-from Strategies.AlignRight import AlignRight
+from ImageProxy import ImageProxy
+from Image import Image
+from Table import Table
+from BookStatistics import BookStatistics
 
 
 def main():
@@ -15,17 +16,13 @@ def main():
     cap1.add(p3)
     p4 = Paragraph("Paragraph 4")
     cap1.add(p4)
-    print("Printing without Alignment")
-    print()
-    cap1.print()
-
-    p1.setAlignStrategy(AlignCenter())
-    p2.setAlignStrategy(AlignRight())
-    p3.setAlignStrategy(AlignLeft())
-    print()
-    print("Printing with Alignment")
-    print()
-    cap1.print()
+    cap1.add(ImageProxy("ImageOne"))
+    cap1.add(Image("ImageTwo"))
+    cap1.add(Paragraph("Some text"))
+    cap1.add(Table("Table 1"))
+    stats = BookStatistics()
+    cap1.accept(stats)
+    stats.printStatistics()
 
 
 if __name__ == "__main__":

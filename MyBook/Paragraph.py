@@ -1,5 +1,5 @@
-
-from Interfaces import ElementInterface
+from Interfaces.ElementInterface import ElementInterface
+from Interfaces.Visitor import Visitor
 
 
 class Paragraph(ElementInterface):
@@ -19,3 +19,6 @@ class Paragraph(ElementInterface):
 
     def setAlignStrategy(self, alignmentStrategy):
         self.textAlignment = alignmentStrategy
+
+    def accept(self, visitor: Visitor):
+        visitor.visitParagraph(self)

@@ -1,5 +1,5 @@
 from typing import List
-from Interfaces import ElementInterface
+from Interfaces.ElementInterface import ElementInterface
 
 
 class CompoundElement(ElementInterface):
@@ -23,3 +23,7 @@ class CompoundElement(ElementInterface):
     def print(self):
         for element in self.elements:
             element.print()
+
+    def accept(self, visitor):
+        for element in self.elements:
+            element.accept(visitor)

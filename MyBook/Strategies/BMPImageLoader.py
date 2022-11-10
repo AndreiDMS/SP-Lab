@@ -1,4 +1,4 @@
-from Interfaces import ImageLoaderInterface
+from Interfaces.ImageLoaderInterface import ImageLoaderInterface
 
 
 class BMPImageLoader(ImageLoaderInterface):
