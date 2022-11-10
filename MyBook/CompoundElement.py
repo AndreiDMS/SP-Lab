@@ -1,5 +1,5 @@
 from typing import List
-from ElementInterface import ElementInterface
+from Interfaces import ElementInterface
 
 
 class CompoundElement(ElementInterface):

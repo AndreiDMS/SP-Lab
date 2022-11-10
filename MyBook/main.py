@@ -1,8 +1,8 @@
 from Paragraph import Paragraph
 from Section import Section
-from AlignCenter import AlignCenter
-from AlignLeft import AlignLeft
-from AlignRight import AlignRight
+from Strategies.AlignCenter import AlignCenter
+from Strategies.AlignLeft import AlignLeft
+from Strategies.AlignRight import AlignRight
 
 
 def main():

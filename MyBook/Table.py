@@ -1,5 +1,5 @@
 
-from ElementInterface import ElementInterface
+from Interfaces import ElementInterface
 
 
 class Table(ElementInterface):

@@ -1,4 +1,4 @@
-from AlignStrategyInterface import AlignStrategyInterface
+from Interfaces import AlignStrategyInterface
 
 
 class AlignLeft(AlignStrategyInterface):

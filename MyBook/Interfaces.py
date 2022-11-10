@@ -30,3 +30,35 @@ class ElementInterface(ABC):
     @abstractmethod
     def print(self):
         pass
+
+
+class PictureInterface(ABC):
+
+    @abstractmethod
+    def url(self):
+        pass
+
+    @abstractmethod
+    def dim(self):
+        pass
+
+    @abstractmethod
+    def content(self):
+        pass
+
+
+class AlignStrategyInterface(ABC):
+
+    def __init__(self):
+        self.lineWidth = 100
+
+    @abstractmethod
+    def render(self, paragraph):
+        pass
+
+
+class ImageLoaderInterface(ABC):
+
+    @abstractmethod
+    def load(self):
+        pass

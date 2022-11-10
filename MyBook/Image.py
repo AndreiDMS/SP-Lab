@@ -1,8 +1,8 @@
 import time
 import random
 
-from ElementInterface import ElementInterface
-from PictureInterface import PictureInterface
+from Interfaces import ElementInterface
+from Interfaces import PictureInterface
 
 
 class Image(ElementInterface, PictureInterface):
