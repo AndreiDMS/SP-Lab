@@ -13,10 +13,6 @@ class Visitor(ABC):
         pass
 
     @abstractmethod
-    def visitTableOfContents(self, toc):
-        pass
-
-    @abstractmethod
     def visitParagraph(self, paragraph):
         pass
 

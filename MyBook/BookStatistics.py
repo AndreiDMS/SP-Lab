@@ -13,9 +13,6 @@ class BookStatistics(Visitor):
     def visitBook(self, book):
         self._book += 1
 
-    def visitTableOfContents(self, toc):
-        pass
-
     def visitSection(self, section):
         self._sections += 1
 
@@ -32,6 +29,7 @@ class BookStatistics(Visitor):
         self._tables += 1
 
     def printStatistics(self):
+        print("\nStatistics")
         print(f"Number of sections is {self._sections}")
         print(f"Number of images is {self._images}")
         print(f"Number of paragraphs is {self._paragraphs}")
