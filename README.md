@@ -1,7 +1,3 @@
-# Laborator SP
-
-## Run app
-
-```
-python3 MyBook/main.py
-```
+# Nota finala: 9
+Nota test: 10
+Nota proiect: 8
